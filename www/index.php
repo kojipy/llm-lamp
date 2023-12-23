@@ -17,6 +17,8 @@
                     <h2 class="subtitle">
                         Your local development environment
                     </h2>
+                    <p>単語を入力してください</p>
+                    <input type="text">
                 </div>
             </div>
         </section>
