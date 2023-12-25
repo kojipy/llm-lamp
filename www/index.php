@@ -14,11 +14,19 @@
                     <h2 class="subtitle">
                         Your local development environment
                     </h2>
-                    <p>単語を入力してください</p>
-                    <input type="text">
+                    <form action="" method="post">
+                        <p>単語を入力してください</p>
+                        <input type="text" name="word">
+                        <button type="submit">推論開始</button>
+                    </form>
                 </div>
             </div>
         </section>
+        <?php
+            if ($_POST) {
+                echo htmlspecialchars($_POST["word"]);
+            }
+        ?>
         <section class="section">
             <div class="container">
                 <div class="columns">
