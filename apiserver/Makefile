@@ -21,3 +21,10 @@ run/docker:
 run/local:
 	poetry run uvicorn src.main:app --reload --port 8080
 
+.PHONY: request
+request:
+	curl -X 'POST' \
+	'http://0.0.0.0:8080/predict' \
+	-H 'accept: application/json' \
+	-H 'Content-Type: application/json' \
+	-d '{"word": "string"}'
