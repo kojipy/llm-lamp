@@ -71,3 +71,8 @@ services:
     image: redis:latest
     ports:
       - "127.0.0.1:${HOST_MACHINE_REDIS_PORT}:6379"
+  apiserver:
+    build:
+      context: ./apiserver
+    ports:
+      - 8080:8080
