@@ -18,5 +18,6 @@ run/docker:
 	docker run --rm -p 127.0.0.1:8080:8080 apiserver
 
 .PHONY: run
-run:
-	poetry run uvicorn src.main:app --reload
+run/local:
+	poetry run uvicorn src.main:app --reload --port 8080
+
