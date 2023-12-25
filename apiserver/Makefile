@@ -9,6 +9,13 @@ install/poetry:
 setup:
 	poetry install
 
+.PHONY: build
+build:
+	docker build -t apiserver .
+
+.PHONY: run*
+run/docker:
+	docker run --rm -p 127.0.0.1:8080:8080 apiserver
 
 .PHONY: run
 run:
