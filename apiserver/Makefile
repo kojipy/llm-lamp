@@ -3,7 +3,7 @@ PYTHON := .venv/bin/python
 
 .PHONY: install*
 install/poetry:
-	curl -sSL https://install.python-poetry.org | python3 - --version 1.7
+	curl -sSL https://install.python-poetry.org | python3 - --version 1.7.1
 
 .PHONY: setup
 setup:
